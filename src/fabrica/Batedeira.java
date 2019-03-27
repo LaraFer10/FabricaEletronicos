@@ -2,11 +2,15 @@
 package fabrica;
 
 
-public class Batedeira extends Liquidificador{
+public class Batedeira extends Produto implements Helicoidal{
     private int totalHelice;
+    private int quant;
 
     public Batedeira(String marca, float preço, int voltagem) {
         super(marca, preço, voltagem);
+    }
+    public Batedeira(float preço, int voltagem) {
+        super(preço, voltagem);
     }
 
     
@@ -17,6 +21,7 @@ public class Batedeira extends Liquidificador{
         return q;
     }
 
+  
     @Override
    public float CalcDesconto(String mes){
        float d;
@@ -32,6 +37,13 @@ public class Batedeira extends Liquidificador{
 
     public void setTotalHelice(int totalHelice) {
         this.totalHelice = totalHelice;
+    }
+     public int getQuant() {
+        return quant;
+    }
+
+    public void setQuant(int quant) {
+        this.quant = quant;
     }
     
 }

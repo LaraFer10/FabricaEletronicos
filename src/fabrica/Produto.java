@@ -14,6 +14,17 @@ public abstract class Produto {
        }
         
    }
+    public Produto(String marca, float preço, int voltagem){
+       this.marca = marca;
+       this.preço = preço;
+       this.voltagem = voltagem;
+       
+   }
+   public Produto(float preço, int voltagem){
+       this.preço = preço;
+       this.voltagem = voltagem;
+   }
+   public abstract float CalcDesconto (String mes);
    
     public String getMarca() {
         return marca;

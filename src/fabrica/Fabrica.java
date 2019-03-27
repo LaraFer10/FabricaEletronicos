@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 public class Fabrica {
 
     public static void main(String[] args) {
-       Liquidificador l = new Liquidificador(50, 120);
+       Liquidificador l = new Liquidificador("Phillips", 50, 120);
        Scanner input = new Scanner(System.in);
        Tampa tampa = new Tampa();
        

@@ -3,6 +3,13 @@ package fabrica;
 
 
 public class Ferro extends Produto {
+
+    public Ferro(String marca, float preço, int voltagem) {
+        super(marca, preço, voltagem);
+    }
+    public Ferro(float preço, int voltagem) {
+        super(preço, voltagem);
+    }
     
     @Override
     public String VerificaVolt(){
@@ -12,6 +19,7 @@ public class Ferro extends Produto {
             return "Voltagem válida";
         }
     }
+    @Override
     public float CalcDesconto(String mes){
        float d;
        if ("Maio".equals(mes)){

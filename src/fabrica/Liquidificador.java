@@ -2,11 +2,18 @@
 package fabrica;
 
 
-public class Liquidificador extends Produto {
+public class Liquidificador extends Produto implements Helicoidal{
     private Tampa tampa;
     int quant;
+
+    public Liquidificador(String marca, float preço, int voltagem) {
+        super(marca, preço, voltagem);
+    }
+    public Liquidificador(float preço, int voltagem) {
+        super( preço, voltagem);
+    }
     
-    
+    @Override
     public float CalcDesconto(String mes){
        float d;
        if("Agosto".equals(mes)){
@@ -15,17 +22,9 @@ public class Liquidificador extends Produto {
         }
         return 0;
    }
-    public Liquidificador(String marca, float preço, int voltagem){
-       this.marca = marca;
-       this.preço = preço;
-       this.voltagem = voltagem;
-       
-   }
-   public Liquidificador(float preço, int voltagem){
-       this.preço = preço;
-       this.voltagem = voltagem;
-   }
     
+    
+    @Override
     public int Qmedia (){
         int q;
         q = this.quant/(this.quant/1);
@@ -39,16 +38,11 @@ public class Liquidificador extends Produto {
         this.tampa = tampa;
     }
 
-    /**
-     * @return the quant
-     */
+    
     public int getQuant() {
         return quant;
     }
 
-    /**
-     * @param quant the quant to set
-     */
     public void setQuant(int quant) {
         this.quant = quant;
     }
